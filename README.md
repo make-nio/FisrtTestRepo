@@ -1,28 +1,20 @@
-# Proyecto de Prueba
+# Prueba de Claude Code Agent en Cursor
 
-Este es un proyecto de prueba creado para explorar y experimentar con herramientas de desarrollo.
+Este repositorio es una prueba del agente de Claude Code ejecutándose dentro del entorno de Cursor.
 
-## Descripcion
+## Objetivo
 
-El objetivo de este repositorio es servir como entorno de pruebas para:
+Explorar las capacidades del agente de Claude Code para generar, modificar y gestionar código de forma autónoma directamente desde el IDE Cursor.
 
-- Probar flujos de trabajo con control de versiones
-- Experimentar con diferentes tecnologias y librerias
-- Validar configuraciones de entorno de desarrollo
+## Proyecto de ejemplo
 
-## Estructura del Proyecto
+Como parte de la prueba se desarrolló una API REST de menú de pizzería con:
 
-```
-FisrtTestRepo/
-└── README.md
-```
-
-## Como Empezar
-
-1. Clona el repositorio
-2. Explora los archivos disponibles
-3. Realiza tus pruebas y experimentos
+- **Node.js + TypeScript** con Express
+- **Prisma ORM** con SQL Server
+- CRUD completo de `Category` y `MenuItem`
+- Arquitectura en capas: routes → controllers → services
 
 ## Notas
 
-Este repositorio es de uso experimental y su contenido puede cambiar en cualquier momento.
+El contenido de este repositorio puede cambiar en cualquier momento ya que es de uso experimental.

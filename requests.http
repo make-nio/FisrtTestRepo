@@ -1,0 +1,136 @@
+@baseUrl = http://localhost:3000/api/menu
+
+### ═══════════════════════════════════════
+###  CATEGORIES
+### ═══════════════════════════════════════
+
+### GET all categories
+GET {{baseUrl}}/categories
+
+###
+
+### GET category by ID
+GET {{baseUrl}}/categories/1
+
+###
+
+### POST create category
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "Pizzas Clásicas",
+  "description": "Nuestras pizzas tradicionales con ingredientes seleccionados"
+}
+
+###
+
+### POST create another category
+POST {{baseUrl}}/categories
+Content-Type: application/json
+
+{
+  "name": "Empanadas",
+  "description": "Empanadas artesanales al horno y fritas"
+}
+
+###
+
+### PUT update category
+PUT {{baseUrl}}/categories/1
+Content-Type: application/json
+
+{
+  "name": "Pizzas Especiales",
+  "description": "Pizzas con ingredientes premium y combinaciones únicas"
+}
+
+###
+
+### DELETE category
+DELETE {{baseUrl}}/categories/1
+
+###
+
+### ═══════════════════════════════════════
+###  MENU ITEMS
+### ═══════════════════════════════════════
+
+### GET all menu items
+GET {{baseUrl}}/items
+
+###
+
+### GET menu item by ID
+GET {{baseUrl}}/items/1
+
+###
+
+### POST create menu item
+POST {{baseUrl}}/items
+Content-Type: application/json
+
+{
+  "name": "Mozzarella",
+  "description": "Salsa de tomate, mozzarella y orégano",
+  "price": 1850.00,
+  "categoryId": 1,
+  "available": true
+}
+
+###
+
+### POST create another menu item
+POST {{baseUrl}}/items
+Content-Type: application/json
+
+{
+  "name": "Napolitana",
+  "description": "Salsa de tomate, mozzarella, rodajas de tomate y ajo",
+  "price": 2100.00,
+  "categoryId": 1,
+  "available": true
+}
+
+###
+
+### POST create unavailable item
+POST {{baseUrl}}/items
+Content-Type: application/json
+
+{
+  "name": "4 Quesos",
+  "description": "Mozzarella, provolone, roquefort y parmesano",
+  "price": 2650.00,
+  "categoryId": 1,
+  "available": false
+}
+
+###
+
+### PUT update menu item (price + availability)
+PUT {{baseUrl}}/items/1
+Content-Type: application/json
+
+{
+  "name": "Mozzarella Grande",
+  "description": "Salsa de tomate, mozzarella y orégano - tamaño familiar",
+  "price": 2200.00,
+  "categoryId": 1,
+  "available": true
+}
+
+###
+
+### PUT mark item as unavailable
+PUT {{baseUrl}}/items/2
+Content-Type: application/json
+
+{
+  "available": false
+}
+
+###
+
+### DELETE menu item
+DELETE {{baseUrl}}/items/1

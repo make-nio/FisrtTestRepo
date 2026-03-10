@@ -23,3 +23,9 @@ model MenuItem {
   categoryId  Int
   category    Category @relation(fields: [categoryId], references: [id])
 }
+
+model User {
+  id       Int    @id @default(autoincrement())
+  username String @unique @db.NVarChar(50)
+  password String @db.NVarChar(255)
+}

@@ -43,7 +43,8 @@ export default async function HomePage() {
       {/* Footer */}
       <footer className="text-center py-8 text-stone-400 text-xs tracking-widest uppercase border-t border-stone-200">
         La Pizzería — Desde 2024
-        <a href="/login" className="ml-4 text-stone-200 hover:text-stone-400 transition-colors" aria-label="admin">·</a>
+        {' '}
+        <a href="/login" className="ml-4 text-stone-400 hover:text-stone-600 transition-colors normal-case tracking-normal font-normal">Gestión</a>
       </footer>
     </main>
   );

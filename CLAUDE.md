@@ -14,7 +14,22 @@ This is a minimal experimental/sandbox repository ("Proyecto de Prueba") intende
 
 ## Current State
 
-This repo now contains a Node.js + TypeScript + Express API with Prisma ORM and SQL Server. See [src/](src/) for the source and [prisma/schema.prisma](prisma/schema.prisma) for the data model.
+This is a monorepo with two packages:
+
+- [backend/](backend/) — Node.js + TypeScript + Express API with Prisma ORM and SQL Server. Runs on port 3000.
+- [frontend/](frontend/) — Next.js 14 + Tailwind CSS app. Runs on port 3001. Consumes the backend API.
+
+### Backend
+- Entry: [backend/src/index.ts](backend/src/index.ts)
+- Routes: [backend/src/routes/menu.ts](backend/src/routes/menu.ts)
+- Schema: [backend/prisma/schema.prisma](backend/prisma/schema.prisma)
+- Use `prisma db push` instead of `prisma migrate dev` (user lacks shadow DB permissions on SQL Server)
+
+### Frontend
+- Entry: [frontend/src/app/page.tsx](frontend/src/app/page.tsx)
+- API client: [frontend/src/lib/api.ts](frontend/src/lib/api.ts)
+- Types: [frontend/src/lib/types.ts](frontend/src/lib/types.ts)
+- API URL configured in `frontend/.env.local` via `NEXT_PUBLIC_API_URL`
 
 ## Git Workflow
 
